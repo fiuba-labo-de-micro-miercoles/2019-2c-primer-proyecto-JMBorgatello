@@ -1,7 +1,7 @@
 ;
 ; TP1.2.asm
 ;
-; Created: 20/5/2020 15:33:00
+; Created: 20/5/2020 15:08:00
 ; Author : Jose Maria Borgatello
 ;
 
@@ -9,7 +9,7 @@
 
 .equ PBX=0 ; Led en PB0
 
-.equ PUERTOB=0b00000001	;(PORTB  con bit 0 solamente como salida)
+.equ PUERTOB=0x01	;(PORTB completo como salida)
 
 .cseg 
 .org 0x0000
@@ -20,8 +20,8 @@
 main:
 			
 ; Configuro puerto B
-			ldi		r20,PUERTOB
-			out		DDRB,r20
+			ldi		r23,PUERTOB
+			out		DDRB,r23
 
 xsiempre:
 
