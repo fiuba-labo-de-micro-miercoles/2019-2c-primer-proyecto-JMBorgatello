@@ -1,3 +1,4 @@
+
 ;
 ; TP1.1.asm
 ;
@@ -9,7 +10,7 @@
 
 .equ PBX=0 ; Led en PB0
 
-.equ PUERTOB=0b11111111	;(PORTB completo como salida)
+.equ PUERTOB=0xFF	;(PORTB completo como salida)
 
 .cseg 
 .org 0x0000
@@ -20,8 +21,8 @@
 main:
 			
 ; Configuro puerto B
-			ldi		r20,PUERTOB
-			out		DDRB,r20
+			ldi		r23,PUERTOB
+			out		DDRB,r23
 
 xsiempre:
 
